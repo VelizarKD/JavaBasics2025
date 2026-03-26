@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class E04_ToyShop {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         double excursionPrice = Double.parseDouble(scanner.nextLine());
         int puzzles = Integer.parseInt(scanner.nextLine());
         int dolls = Integer.parseInt(scanner.nextLine());
