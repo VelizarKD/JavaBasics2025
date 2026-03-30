@@ -1,6 +1,5 @@
 package org.example.ForLoop;
 
-import java.beans.Introspector;
 import java.util.Scanner;
 
 public class E02_ReverseNum {
