@@ -7,7 +7,6 @@ public class E03_Histogram {
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine());
 
-        int countNum = 0;
         double p1 = 0;
         double p2 = 0;
         double p3 = 0;
