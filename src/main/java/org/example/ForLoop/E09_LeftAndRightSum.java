@@ -11,7 +11,7 @@ public class E09_LeftAndRightSum {
 
         int leftSum = 0;
         int rightSum = 0;
-        int totalSum = 0;
+
         for (int i = 0; i < n; i++) {
             int leftNum = Integer.parseInt(scanner.nextLine());
             leftSum += leftNum;
