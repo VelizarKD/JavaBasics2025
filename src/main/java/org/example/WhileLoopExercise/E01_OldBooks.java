@@ -9,20 +9,21 @@ public class E01_OldBooks {
         String annyBook = scanner.nextLine();
         int bookCount = 0;
 
+        String currentBook = scanner.nextLine();
+        while (!currentBook.equals(annyBook)) {
 
-        while (true){
-            String currentBook = scanner.nextLine();
-
-
-            if (currentBook.equals(annyBook)) {
-                System.out.printf("You checked %d books and found it.", bookCount);
+            if (currentBook.equals("No More Books")) {
                 break;
             }
-            if (currentBook.equals("No More Books")){
-                System.out.printf("The book you search is not here!%nYou checked %d books.", bookCount);
-                break;
-            }
+
             bookCount++;
+            currentBook = scanner.nextLine();
+        }
+
+        if (currentBook.equals(annyBook)) {
+            System.out.printf("You checked %d books and found it.", bookCount);
+        } else {
+            System.out.printf("The book you search is not here!%n" + "You checked %d books.", bookCount);
         }
 
     }

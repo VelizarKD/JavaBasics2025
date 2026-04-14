@@ -6,7 +6,39 @@ public class E02_ExamPreparation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int failedThreshold = Integer.parseInt(scanner.nextLine());
+        int badGradesLimit = Integer.parseInt(scanner.nextLine());
+
+        int sumGrades = 0;
+        int gradesCount = 0;
+        String lastProblem = "";
+        int badGradesCount = 0;
+
+        String command = scanner.nextLine();
+
+        while (!command.equals("Enough")) {
+            String taskName = command;
+            int grade = Integer.parseInt(scanner.nextLine());
+            lastProblem = taskName;
+
+            if (grade <= 4) {
+                badGradesCount++;
+                if (badGradesCount >= badGradesLimit) {
+                    break;
+                }
+            }
+
+            gradesCount++;
+            sumGrades += grade;
+
+            command = scanner.nextLine();
+        }
+
+        if (badGradesCount >= badGradesLimit) {
+            System.out.printf("You need a break, %d poor grades.", badGradesCount);
+        } else {
+            System.out.printf("Average score: %.2f%nNumber of problems: %d%nLast problem: %s",1.0 * sumGrades / gradesCount, gradesCount, lastProblem);
+        }
+       /* int failedThreshold = Integer.parseInt(scanner.nextLine());
 
         int failedTimes = 0;
         int solvedProblemCount = 0;
@@ -34,6 +66,6 @@ public class E02_ExamPreparation {
             System.out.printf("Average score: %.2f%n", gradesSum / solvedProblemCount);
             System.out.printf("Number of problems: %d%n", solvedProblemCount);
             System.out.printf("Last problem: %s", lastProblem);
-        }
+        }*/
     }
 }
