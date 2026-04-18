@@ -9,5 +9,6 @@ public class E02_MultiplicationTable {
                 System.out.printf("%d * %d = %d%n", i, j, product);
             }
         }
+
     }
 }
