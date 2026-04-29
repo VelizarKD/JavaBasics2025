@@ -35,6 +35,7 @@ public class E06_CinemaTickets {
                 }
                 endCommand = scanner.nextLine();
             }
+
             System.out.printf("%s - %.2f%% full.%n", movieName, 1.0 * ticketsSoldCounter / freeSeats * 100);
             command = scanner.nextLine();
         }

@@ -31,5 +31,6 @@ public class E04_TrainTheTrainers {
 
         double finalAssessment = sumAverageGrades / presentationsCount;
         System.out.printf("Student's final assessment is %.2f.", finalAssessment);
+
     }
 }
