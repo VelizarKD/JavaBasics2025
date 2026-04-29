@@ -12,7 +12,7 @@ public class E01_NumberPyramid {
         boolean isBigger = false;
 
         for (int rows = 1; rows <= n; rows++) {
-            for (int cols = 0; cols < rows; cols++) {
+            for (int cols = 1; cols <= rows; cols++) {
                 if (current > n) {
                     isBigger = true;
                     break;
